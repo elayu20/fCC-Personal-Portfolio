@@ -27,6 +27,7 @@ header {
         rgb(40, 40, 40),
         rgb(20, 20, 20)
     );
+    z-index: 4;
 } 
 
 header h1 {
@@ -58,30 +59,95 @@ header h1 {
 
 #welcome-section {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background: linear-gradient(
         90deg,
         rgb(129, 39, 240),
         rgb(53, 0, 122)
     );
-    height: 100vh;
+    height: calc(100vh - var(--header-height));
+    margin: 0;
 }
 
 #welcome-section h1 {
     font-size: 4em;
-    position: absolute;
-    top: 40%;
     color: rgb(228, 169, 169);
+    margin: 0;
+    position: relative;
+    top: 30%;
 }
 
 #welcome-section p {
-    position: absolute;
-    top: 47%;
     font-size: 3em;
     font-weight: bold;
     color: white;
+    margin: 0;
+    position: relative;
+    top: 30%;
 }
 
 #projects {
-    
+    padding: 2rem 0;
+    height: 100vh;
+    background: linear-gradient(
+        90deg,
+        rgb(93, 73, 222),
+        rgb(4, 12, 107)
+    );
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 3.5em;
+    margin: 0 0 5% 0;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+}
+
+.project-img-container {
+    width: 20%;
+    background-color: rgb(220, 220, 220);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(200, 200, 200);
+    height: 30%;
+}
+
+.project-description p {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 0;
+}
+
+#nvidia-project-description p {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.img-container {
+    overflow: hidden;
+    height: 70%;
+}
+
+.project-img {
+    width: 100%;
+    object-fit: contain;
+}
+
+#nvidia-img {
+    position: relative;
+    top: 5%;
 }
